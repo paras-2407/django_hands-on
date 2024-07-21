@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title>Django Web - {{title}}</title>
+    {% else %}
+        <title>Django Web</title>
+    {%endif %}
+</head>
+<body>
+    <!-- <h1>Index Web!</h1> -->
+    <!-- this posts is the key of context formed in the views in the my_app -->
+    
+    {% for student in students %} 
+    <h1>{{ student.name }}</h1>
+    <p>Age {{student.age}}, Program {{student.program}}, Addmission on {{ student.addmission_date | date:"F d,Y"}}</p>
+    <p>Mentor {{student.mentor}}, Tech stack: {{student.tech}}, Subject: {{student.subject}} </p>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            /* Adjust the size as needed */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #3300db;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 5px;
+            display: block;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            background: #ff416c;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ff4b2b;
+        }
+
+        .info-section {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .info-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            flex: 1 1 calc(33% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            background: #f4f4f4;
+        }
+
+        .contact-section .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section button {
+            align-self: center;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .services {
+                flex-direction: column;
+            }
+
+            .service {
+                flex: 1 1 100%;
+
+            }
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://static.wixstatic.com/media/a93535_9aa0a305e37d42bcb54f24a768bef822~mv2.png/v1/fit/w_2500,h_1330,al_c/a93535_9aa0a305e37d42bcb54f24a768bef822~mv2.png"
+                    alt="Brudite Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:8000/home">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/about">About</a></li>
+                <li><a href="http://127.0.0.1:8000/services">Services</a></li>
+                <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:8000/login">Login</a></li>
+            </ul>
+            <div class="menu-toggle"><span></span></div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Brudite!</h1>
+            <p>Your journey to knowledge and success starts here.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; Created By The Paras.G</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
